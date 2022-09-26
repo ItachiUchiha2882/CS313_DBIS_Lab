@@ -1,3 +1,24 @@
+### For macbook, if getting errors while connecting to mysql and apache web server in XAMPP, do following things:
+
+1. Stop the currently running mysql server by going into system preferences and stopping it from there or you can use commands for that also.
+
+2. For terminating the currently running apache web server run the command 
+```sql
+sudo apachectl stop
+```
+
+3. Now try reconnecting to the servers, it will work !!
+
+#### Error handling for mysql connection
+If unable to use the command
+```sql
+mysql -u root -p
+```
+Use 
+```sql
+mysql -h 127.0.0.1 -P 3306 -u root
+```
+
 ### To create a new user called ‘user’ with password = ‘password’ : 
 Open MySQL as the root user, then
 ```sql
