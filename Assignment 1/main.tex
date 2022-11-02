@@ -1,0 +1,107 @@
+\title{CS313 : DataBases and Information Systems Lab \\
+    \vspace{0.6cm}
+    Lab Assignment 1
+} % You may change the title if you want.
+% \subtitle{Hello}
+\author{Sourabh Bhosale \\ 200010004}
+
+\date{\today}
+
+\documentclass[12pt]{article}
+\usepackage{fullpage}
+\usepackage{enumitem}
+\usepackage{amsmath,mathtools}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{textcomp}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\begin{document}
+\maketitle
+
+%---------------------------------------------------------------------
+
+\section{}
+\subsection{} \\
+Dr. Edgar Frank Codd was an English computer scientist who, while working for IBM, invented the relational model for database management, the theoretical basis for relational databases and relational database management systems. He is also known to the world as the ‘Father of Database Management Systems’ had propounded 12 rules which are in-fact 13 in number. He also introduced the term Online Analytical Processing (OLAP). According to him, a DBMS is fully relational if it abides by all his twelve rules. Codd received the Turing Award in 1981. His brilliant and seminal research paper ‘A Relational Model of Data for Large Shared Data Banks’ has been great contribution to the field.
+
+Source: \href{https://en.wikipedia.org/wiki/Edgar_F._Codd}{Edgar Frank Codd} \\
+
+Michael Ralph Stonebraker is a computer scientist specializing in database systems. He began work in this area as a young assistant professor at the University of California—Berkeley. Currently he is an adjunct professor at MIT CSAIL and a database pioneer. He is also the founder of many database companies, including Ingres Corporation, Illustra, Paradigm4, StreamBase Systems, etc. For his contributions to database research, Stonebraker received the 2014 Turing Award, often described as "the Nobel Prize for computing." He is also known as an editor for the book Readings in Database Systems. His contributions to the refinement and spread of database management technology are hard to overstate. 
+
+Source: \href{https://en.wikipedia.org/wiki/Michael_Stonebraker}{Micheal Stonebreaker} \\
+
+\subsection{}
+Data models define how the logical structure of a database is modeled. They define how data is connected to each other and how they are processed and stored inside the system. It provides the conceptual tools for describing the design of a database at each level of data abstraction. There are some data models like Relational Data Model, Entity-Relationship Data Model, Object-based Data Model, Semistructured Data Model used for understanding the structure of the database. A data model can sometimes be referred to as a data structure, especially in the context of programming languages. They enable business and technical resources to collaboratively decide how data will be stored, accessed, shared, updated and leveraged across an organization. 
+
+Source: \href{https://en.wikipedia.org/wiki/Data_model}{Data Model} \\
+
+A database application is a computer program whose primary purpose is retrieving information from a computerized database. From here, information can be inserted, modified or deleted which is subsequently conveyed back into the database. Early examples of database applications were accounting systems and airline reservations systems, such as SABRE, developed starting in 1957. Many of today's most widely used computer systems are database applications, for example, Facebook, which was built on top of MySQL. The main purpose of database applications is to provide a way for data to be consumed either by end users or other higher-level applications. It can be used for storing or retrieving data, processing transactions, or various machine learning calculations.
+
+Source: \href{https://en.wikipedia.org/wiki/Database_application}{Database Application} \\
+
+%---------------------------------------------------------------------
+
+\section{}
+Some large digital Indian database applications that have a huge database size and large number of transactions iare as follows:
+\begin{itemize}
+    \item Finance: Bajaj Finance Ltd, IDFC First Bank Ltd, Muthoot Finance Ltd.
+    \item Retail: Reliance Retail, Future Group, Titan Company, Aditya Birla Retail.
+    \item Manufacturing: Ashok Leyland, Hero Honda Motors, Maruti Suzuki Limited, Godrej Group.
+    \item IT: TCS, Infosys, HCL Technologies, Larsen & Toubro Infotech Ltd.
+\end{itemize}
+
+Source: \href{https://www.softwaretestinghelp.com/database-management-software/}{Large Scale DB Apps} 
+
+\newpage
+%---------------------------------------------------------------------
+
+\section{} 
+\textbf{OLTP:} \\
+Online Transactional Processing or OLTP is collection/class of software programs which are capable of supporting the applications which are Transaction-Oriented. Online transactional processing (OLTP) enables the real-time execution of large numbers of database transactions by large numbers of people, typically over the Internet. OLTP systems are behind many of our everyday transactions, from ATMs to in-store purchases to hotel reservations. OLTP can also drive non-financial transactions, including password changes and text messages. These systems are designed to support on-line transaction and process query quickly on the Internet. If a transaction fails, built-in system logic ensures data integrity.
+\\
+\textbf{\textit{For Example:}} Telemarketers entering telephone survey results, ATM Center, Online Banking, Sending a text message, etc.
+
+Source: \href{https://database.guide/what-is-oltp/}{OLTP Reference}\\
+
+\noindent
+\textbf{OLAP:} \\
+Online Analytical Processing is a system for performing multi-dimensional analysis at high speeds on large volumes of data. Typically, this data is from a data warehouse, data mart or some other centralized data store. OLAP is ideal for data mining, business intelligence and complex analytical calculations, as well as business reporting functions like financial analysis, budgeting and sales forecasting. It consists of a type of software tools that are used for data analysis for business decisions. OLAP provides an environment to get insights from the database retrieved from multiple database systems at one time.
+\\
+\textbf{\textit{For Example:}} Management Reporting, Business Process Management (BPM), Budgeting and Forecasting, Financial Reporting, Netflix Recommendation, Spotify playlists and homepage suggestions etc.
+
+Source: \href{https://olap.com/olap-definition/}{OLAP Reference} \\
+
+\newpage
+
+Table 1 shows the differences between OLTP \& OLAP over different parameters.
+
+Source: \href{https://www.geeksforgeeks.org/difference-between-olap-and-oltp-in-dbms/}{OLTP vs. OLAP Reference}
+
+
+\begin{center}
+    \begin{table}[]
+\begin{tabular}{|c|c|c|}
+\hline
+                    & \textbf{OLTP}                                                                                         & \textbf{OLAP}                                                                                                            \\ \hline
+Characteristics     & \begin{tabular}[c]{@{}c@{}}Handles a large number of small \\ transactions\end{tabular}               & \begin{tabular}[c]{@{}c@{}}Handles large volumes of data \\ with complex queries\end{tabular}                            \\ \hline
+Inserts and Updates & \begin{tabular}[c]{@{}c@{}}Short and fast inserts and \\ updates initiated by end users\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Periodic long-running batch jobs \\ refresh the data\end{tabular}                             \\ \hline
+Purpose             & \begin{tabular}[c]{@{}c@{}}To Insert, Update, and Delete \\information from the database\end{tabular} & \begin{tabular}[c]{@{}c@{}}To extract information for analysis \\and decision-making\end{tabular}             \\ \hline
+Task        & \begin{tabular}[c]{@{}c@{}}Provides a multi-dimensional view \\ of different business tasks\end{tabular}                        & \begin{tabular}[c]{@{}c@{}}Reveals a snapshot of present  \\ business tasks\end{tabular} \\ \hline
+Processing Time       & \begin{tabular}[c]{@{}c@{}}Comparatively fast\end{tabular}                        & \begin{tabular}[c]{@{}c@{}}Can take a lengthy time\end{tabular} \\ \hline
+Operations       & \begin{tabular}[c]{@{}c@{}}Both read and \\write operations\end{tabular}                        & \begin{tabular}[c]{@{}c@{}}Only read and \\rarely write operation\end{tabular} \\ \hline
+Nature of Audience          & \begin{tabular}[c]{@{}c@{}}Focused on the market\end{tabular}                     & \begin{tabular}[c]{@{}c@{}}Focused on the customer\end{tabular}                                     \\ \hline
+\end{tabular}
+\caption{OLTP vs. OLAP}
+\end{table}
+\end{center}
+
+%---------------------------------------------------------------------
+
+
+\end{document}
